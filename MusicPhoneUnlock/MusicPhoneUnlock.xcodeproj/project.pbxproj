@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A71170D221C960E00162FD8 /* MusicNote3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711703221C960D00162FD8 /* MusicNote3.png */; };
+		7A71170E221C960E00162FD8 /* MusicNote4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711704221C960D00162FD8 /* MusicNote4.png */; };
+		7A71170F221C960E00162FD8 /* MusicNote5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711705221C960D00162FD8 /* MusicNote5.png */; };
+		7A711710221C960E00162FD8 /* MusicNote10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711706221C960D00162FD8 /* MusicNote10.png */; };
+		7A711711221C960E00162FD8 /* MusicNote8.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711707221C960D00162FD8 /* MusicNote8.png */; };
+		7A711712221C960E00162FD8 /* MusicNote9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711708221C960E00162FD8 /* MusicNote9.png */; };
+		7A711713221C960E00162FD8 /* MusicNote2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A711709221C960E00162FD8 /* MusicNote2.png */; };
+		7A711714221C960E00162FD8 /* MusicNote7.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A71170A221C960E00162FD8 /* MusicNote7.png */; };
+		7A711715221C960E00162FD8 /* MusicNote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A71170B221C960E00162FD8 /* MusicNote1.png */; };
+		7A711716221C960E00162FD8 /* MusicNote6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A71170C221C960E00162FD8 /* MusicNote6.png */; };
 		B7F024BC22192F6D00B33F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F024BB22192F6D00B33F07 /* AppDelegate.swift */; };
 		B7F024BE22192F6D00B33F07 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B7F024BD22192F6D00B33F07 /* GameScene.sks */; };
 		B7F024C022192F6D00B33F07 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B7F024BF22192F6D00B33F07 /* Actions.sks */; };
@@ -29,6 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A711703221C960D00162FD8 /* MusicNote3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote3.png; path = "../../Music Unlock Graphics/MusicNote3.png"; sourceTree = "<group>"; };
+		7A711704221C960D00162FD8 /* MusicNote4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote4.png; path = "../../Music Unlock Graphics/MusicNote4.png"; sourceTree = "<group>"; };
+		7A711705221C960D00162FD8 /* MusicNote5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote5.png; path = "../../Music Unlock Graphics/MusicNote5.png"; sourceTree = "<group>"; };
+		7A711706221C960D00162FD8 /* MusicNote10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote10.png; path = "../../Music Unlock Graphics/MusicNote10.png"; sourceTree = "<group>"; };
+		7A711707221C960D00162FD8 /* MusicNote8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote8.png; path = "../../Music Unlock Graphics/MusicNote8.png"; sourceTree = "<group>"; };
+		7A711708221C960E00162FD8 /* MusicNote9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote9.png; path = "../../Music Unlock Graphics/MusicNote9.png"; sourceTree = "<group>"; };
+		7A711709221C960E00162FD8 /* MusicNote2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote2.png; path = "../../Music Unlock Graphics/MusicNote2.png"; sourceTree = "<group>"; };
+		7A71170A221C960E00162FD8 /* MusicNote7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote7.png; path = "../../Music Unlock Graphics/MusicNote7.png"; sourceTree = "<group>"; };
+		7A71170B221C960E00162FD8 /* MusicNote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote1.png; path = "../../Music Unlock Graphics/MusicNote1.png"; sourceTree = "<group>"; };
+		7A71170C221C960E00162FD8 /* MusicNote6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicNote6.png; path = "../../Music Unlock Graphics/MusicNote6.png"; sourceTree = "<group>"; };
 		B7F024B822192F6D00B33F07 /* MusicPhoneUnlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPhoneUnlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F024BB22192F6D00B33F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F024BD22192F6D00B33F07 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -83,6 +103,16 @@
 		B7F024BA22192F6D00B33F07 /* MusicPhoneUnlock */ = {
 			isa = PBXGroup;
 			children = (
+				7A71170B221C960E00162FD8 /* MusicNote1.png */,
+				7A711709221C960E00162FD8 /* MusicNote2.png */,
+				7A711703221C960D00162FD8 /* MusicNote3.png */,
+				7A711704221C960D00162FD8 /* MusicNote4.png */,
+				7A711705221C960D00162FD8 /* MusicNote5.png */,
+				7A71170C221C960E00162FD8 /* MusicNote6.png */,
+				7A71170A221C960E00162FD8 /* MusicNote7.png */,
+				7A711707221C960D00162FD8 /* MusicNote8.png */,
+				7A711708221C960E00162FD8 /* MusicNote9.png */,
+				7A711706221C960D00162FD8 /* MusicNote10.png */,
 				B7F024BB22192F6D00B33F07 /* AppDelegate.swift */,
 				B7F024BD22192F6D00B33F07 /* GameScene.sks */,
 				B7F024BF22192F6D00B33F07 /* Actions.sks */,
@@ -186,10 +216,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A711716221C960E00162FD8 /* MusicNote6.png in Resources */,
+				7A711711221C960E00162FD8 /* MusicNote8.png in Resources */,
+				7A711715221C960E00162FD8 /* MusicNote1.png in Resources */,
+				7A711712221C960E00162FD8 /* MusicNote9.png in Resources */,
 				B7F024C722192F6D00B33F07 /* Main.storyboard in Resources */,
 				B7F024BE22192F6D00B33F07 /* GameScene.sks in Resources */,
 				B7F024C922192F6F00B33F07 /* Assets.xcassets in Resources */,
+				7A71170E221C960E00162FD8 /* MusicNote4.png in Resources */,
+				7A71170D221C960E00162FD8 /* MusicNote3.png in Resources */,
+				7A71170F221C960E00162FD8 /* MusicNote5.png in Resources */,
+				7A711714221C960E00162FD8 /* MusicNote7.png in Resources */,
 				B7F024CC22192F6F00B33F07 /* LaunchScreen.storyboard in Resources */,
+				7A711710221C960E00162FD8 /* MusicNote10.png in Resources */,
+				7A711713221C960E00162FD8 /* MusicNote2.png in Resources */,
 				B7F024C022192F6D00B33F07 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
