@@ -119,7 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="blackPaintImage" destination="tsE-HI-CfZ" id="cdr-6z-5OA"/>
+                        <outlet property="bluePaintImage" destination="lvM-df-1AZ" id="YsB-ql-D39"/>
+                        <outlet property="greenPaintImage" destination="2EY-mz-wNa" id="ycM-EK-ief"/>
                         <outlet property="paintBrushImage" destination="0G4-H5-b8w" id="pdF-aN-6p4"/>
+                        <outlet property="yellowPaintImage" destination="3Sk-Tn-bBg" id="CqB-5K-LjG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
