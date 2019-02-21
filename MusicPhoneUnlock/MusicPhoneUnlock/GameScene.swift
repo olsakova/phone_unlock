@@ -41,25 +41,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in touches {
             if touch == touches.first {
-//                print("Made a touch")
-            }
-            
-            enumerateChildNodes(withName: "//*", using: { (note, stop) in
-                if (self.i < self.password.count && note.name == self.password[self.i]) {
-                    if note.contains(touch.location(in: self)){
-                        print("Note " + String(self.i))
-                        self.i = self.i+1;
-                        
-                        if (self.i == self.password.count){
-                            print("UNLOCK MY PHONE")
+                enumerateChildNodes(withName: "//*", using: { (note, stop) in
+                    if (self.i < self.password.count && note.name == self.password[self.i]) {
+                        if note.contains(touch.location(in: self)){
+                            print("Note " + String(self.i))
+                            self.i = self.i+1;
                             
-                            let scene = SuccessScene(fileNamed: "SuccessScene")!
-                            let transition = SKTransition.moveIn(with: .right, duration: 1)
-                            self.view?.presentScene(scene, transition: transition)
+                            if (self.i == self.password.count){
+                                print("UNLOCK MY PHONE")
+                                
+                                let scene = SuccessScene(fileNamed: "SuccessScene")!
+                                let transition = SKTransition.moveIn(with: .right, duration: 1)
+                                self.view?.presentScene(scene, transition: transition)
+                            }
                         }
                     }
-                }
-            })
+//                    else {
+//                        print("ya goofed bro")
+//                        self.i = 0
+//                    }
+                })
+            }
         }
     }
     
