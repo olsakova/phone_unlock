@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameTimer:Timer!
     var possibleNotes = ["MusicNote1", "MusicNote2", "MusicNote3", "MusicNote4", "MusicNote5", "MusicNote6", "MusicNote7", "MusicNote8", "MusicNote9", "MusicNote10" ]
     var password = ["MusicNote3", "MusicNote8", "MusicNote1"]
+    var previous = "MusicNoteX"
     
     let noteCategory:UInt32 = 0x1 << 1
     
@@ -45,6 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if (self.i < self.password.count && note.name == self.password[self.i]) {
                         if note.contains(touch.location(in: self)){
                             print("Note " + String(self.i))
+                            self.previous = self.password[self.i]
                             self.i = self.i+1;
                             
                             if (self.i == self.password.count){
@@ -56,11 +58,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             }
                         }
                     }
-//                    else {
-//                        print("ya goofed bro")
-//                        self.i = 0
-//                    }
+                    else if note.name == self.possibleNotes[0] || note.name == self.possibleNotes[1] || note.name == self.possibleNotes[2] || note.name == self.possibleNotes[3] || note.name == self.possibleNotes[4] || note.name == self.possibleNotes[5] || note.name == self.possibleNotes[6] || note.name == self.possibleNotes[7] || note.name == self.possibleNotes[8] || note.name == self.possibleNotes[9]  {
+                        if note.contains(touch.location(in: self)){
+                            print("Its one of the notes")
+                            if (note.name != self.previous) {
+                                print("Wrong pick")
+                                self.i = 0
+                            }
+                        }
+                    }
+                    else {
+                        print("Screen was clicked")
+                    }
+                    
                 })
+            }
+            else {
+                break
             }
         }
     }
