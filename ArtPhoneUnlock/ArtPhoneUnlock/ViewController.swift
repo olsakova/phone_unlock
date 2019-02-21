@@ -12,6 +12,8 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
+    let password = "051"
+    var currentPasswordAttempt = ""
     var currentColor = 0
     
     override func viewDidLoad() {
@@ -35,10 +37,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print("Success")
     }
     
+    func passwordEntered() {
+        if (self.password.elementsEqual(self.currentPasswordAttempt)) {
+            print("Password Correct!")
+        } else {
+            print("password failed")
+            
+        }
+        currentPasswordAttempt = ""
+        print("password reset")
+    }
+    
     func startColorTimer(colorNum: Int) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             if (colorNum == self.currentColor) {
                 print("Color chosen: \(colorNum)")
+                self.currentPasswordAttempt.append(String(colorNum))
+                
+                if (self.currentPasswordAttempt.count == self.password.count) {
+                    self.passwordEntered()
+                }
             }
     
         })
