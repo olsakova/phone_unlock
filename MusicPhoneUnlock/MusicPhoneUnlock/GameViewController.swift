@@ -12,6 +12,10 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var scene: GameScene?
+    var scene2: SuccessScene?
+    var skView: SKView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +35,7 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
@@ -47,4 +51,5 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
 }
