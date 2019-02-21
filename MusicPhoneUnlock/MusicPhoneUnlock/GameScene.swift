@@ -56,10 +56,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             }
                         }
                     }
-                    else {
-                        print("ya goofed bro")
-                        self.i = 0
-                    }
+//                    else {
+//                        print("ya goofed bro")
+//                        self.i = 0
+//                    }
                 })
             }
         }
