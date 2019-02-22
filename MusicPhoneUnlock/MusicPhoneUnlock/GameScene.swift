@@ -45,6 +45,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 enumerateChildNodes(withName: "//*", using: { (note, stop) in
                     if (self.i < self.password.count && note.name == self.password[self.i]) {
                         if note.contains(touch.location(in: self)){
+                            let pulseUp = SKAction.scale(to: 2.0, duration: 0.4)
+                            let pulseDown = SKAction.scale(to: 1.0, duration: 0.4)
+                            let pulse = SKAction.sequence([pulseUp, pulseDown])
+                            let runPulse = SKAction.repeat(pulse, count: 1) //repeatForever(pulse)
+                            note.run(runPulse)
+                            
+                            
                             print("Note " + String(self.i))
                             self.previous = self.password[self.i]
                             self.i = self.i+1;
@@ -61,6 +68,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     else if note.name == self.possibleNotes[0] || note.name == self.possibleNotes[1] || note.name == self.possibleNotes[2] || note.name == self.possibleNotes[3] || note.name == self.possibleNotes[4] || note.name == self.possibleNotes[5] || note.name == self.possibleNotes[6] || note.name == self.possibleNotes[7] || note.name == self.possibleNotes[8] || note.name == self.possibleNotes[9]  {
                         if note.contains(touch.location(in: self)){
                             print("Its one of the notes")
+                            
+                            let pulseUp = SKAction.scale(to: 2.0, duration: 0.4)
+                            let pulseDown = SKAction.scale(to: 1.0, duration: 0.4)
+                            let pulse = SKAction.sequence([pulseUp, pulseDown])
+                            let runPulse = SKAction.repeat(pulse, count: 1) //repeatForever(pulse)
+                            note.run(runPulse)
+
+                            
+                            
                             if (note.name != self.previous) {
                                 print("Wrong pick")
                                 self.i = 0
