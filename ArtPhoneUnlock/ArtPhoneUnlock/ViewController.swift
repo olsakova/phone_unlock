@@ -70,13 +70,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print("Color chosen: \(colorNum)")
                 self.currentPasswordAttempt.append(String(colorNum))
                 
-                //paint.isHighlighted = true
                 self.colorsPicked.append(paint)
                 
                 UIView.animate(withDuration: 0.5, animations: {() -> Void in
                     paint.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                 }, completion: {(_ finished: Bool) -> Void in
-                    paint.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    UIView.animate(withDuration: 0.5, animations: {() -> Void in
+                        paint.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    })
                 })
                 
                 if (self.currentPasswordAttempt.count == self.password.count) {
