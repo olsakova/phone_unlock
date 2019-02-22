@@ -59,9 +59,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             paints.isHighlighted = false
         }
         colorsPicked.removeAll()
-        
-        
-        
     }
     
     func startColorTimer(colorNum: Int, paint: UIImageView) {
