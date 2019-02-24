@@ -51,7 +51,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             let runPulse = SKAction.repeat(pulse, count: 1) //repeatForever(pulse)
                             note.run(runPulse)
                             
-                            
                             print("Note " + String(self.i))
                             self.previous = self.password[self.i]
                             self.i = self.i+1;
