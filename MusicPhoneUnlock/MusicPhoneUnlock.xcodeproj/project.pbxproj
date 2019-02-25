@@ -475,12 +475,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV9RQ2J5M7;
-				INFOPLIST_FILE = music/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MusicPhoneUnlock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andie.music;
+				PRODUCT_BUNDLE_IDENTIFIER = HCI581.MusicPhoneUnlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,12 +493,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV9RQ2J5M7;
-				INFOPLIST_FILE = music/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MusicPhoneUnlock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andie.music;
+				PRODUCT_BUNDLE_IDENTIFIER = HCI581.MusicPhoneUnlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
