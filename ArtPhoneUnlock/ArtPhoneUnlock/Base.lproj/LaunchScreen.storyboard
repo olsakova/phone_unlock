@@ -22,19 +22,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palette Unlock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP3-bb-WfJ">
-                                <rect key="frame" x="70" y="258" width="235" height="60"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <rect key="frame" x="70" y="376" width="235" height="60"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="2CI-oK-Jat"/>
+                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="332" id="2CI-oK-Jat"/>
                             <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerX" secondItem="fuq-aM-FSH" secondAttribute="centerX" id="4P3-Jm-mQ8"/>
                             <constraint firstItem="fuq-aM-FSH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6ME-mF-lSL"/>
                             <constraint firstItem="fuq-aM-FSH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9xX-NJ-Ka2"/>
                             <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Dg6-Pa-BvM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gP3-bb-WfJ" secondAttribute="bottom" constant="460" id="Eue-dL-IGo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gP3-bb-WfJ" secondAttribute="bottom" constant="342" id="Eue-dL-IGo"/>
                             <constraint firstAttribute="bottom" secondItem="fuq-aM-FSH" secondAttribute="bottom" id="KQG-vb-G6Z"/>
                             <constraint firstItem="gP3-bb-WfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="tGa-cf-jc7"/>
                         </constraints>
