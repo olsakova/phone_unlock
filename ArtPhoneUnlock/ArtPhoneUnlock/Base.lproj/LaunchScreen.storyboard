@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-aM-FSH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="-20" y="-30" width="360" height="540"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palette Unlock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP3-bb-WfJ">
-                                <rect key="frame" x="70" y="376" width="235" height="60"/>
+                                <rect key="frame" x="59.5" y="219" width="201" height="42"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,14 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="332" id="2CI-oK-Jat"/>
-                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerX" secondItem="fuq-aM-FSH" secondAttribute="centerX" id="4P3-Jm-mQ8"/>
-                            <constraint firstItem="fuq-aM-FSH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6ME-mF-lSL"/>
-                            <constraint firstItem="fuq-aM-FSH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9xX-NJ-Ka2"/>
-                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Dg6-Pa-BvM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gP3-bb-WfJ" secondAttribute="bottom" constant="342" id="Eue-dL-IGo"/>
-                            <constraint firstAttribute="bottom" secondItem="fuq-aM-FSH" secondAttribute="bottom" id="KQG-vb-G6Z"/>
-                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="tGa-cf-jc7"/>
+                            <constraint firstItem="fuq-aM-FSH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-30" id="6ME-mF-lSL"/>
+                            <constraint firstItem="fuq-aM-FSH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-20" id="9xX-NJ-Ka2"/>
+                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="H9W-wg-FMJ"/>
+                            <constraint firstAttribute="bottom" secondItem="fuq-aM-FSH" secondAttribute="bottom" constant="-30" id="KQG-vb-G6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="fuq-aM-FSH" secondAttribute="trailing" constant="-20" id="Q0V-9Y-J75"/>
+                            <constraint firstItem="gP3-bb-WfJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jWI-pP-dTv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -48,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wood" width="824" height="824"/>
+        <image name="wood" width="412" height="412"/>
     </resources>
 </document>
