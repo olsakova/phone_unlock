@@ -8,17 +8,38 @@
 
 import UIKit
 import CoreLocation
+import AudioToolbox
+
+var usr_password: String = ""
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
-    let password = "051"
+    var password = ""
+    var pass_colors: [UIImageView] = []
     var currentPasswordAttempt = ""
     var currentColor = 0
     var colorsPicked: [UIImageView] = []
+    var attempt = 0
+    
+    var done = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        currentPasswordAttempt = ""
+        done = false
+        colorsPicked.removeAll()
+        switch usr_password {
+        case "":
+            password = "051"
+            pass_colors.append(blackPaintImage)
+            pass_colors.append(redPaintImage)
+            pass_colors.append(greenPaintImage)
+        default:
+            password = usr_password
+            setpass_colors (pass: usr_password)
+        }
         
         if (CLLocationManager.headingAvailable()) {
             locationManager.headingFilter = 1
@@ -26,6 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
         }
     }
+    @IBOutlet weak var attempt_label: UILabel!
     @IBOutlet weak var paintBrushImage: UIImageView!
     @IBOutlet weak var bluePaintImage: UIImageView!
     @IBOutlet weak var blackPaintImage: UIImageView!
@@ -36,34 +58,66 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var redPaintImage: UIImageView!
     @IBOutlet weak var orangePaintImage: UIImageView!
     
-    
-    func printSuccess() {
-        print("Success")
-    }
-    
-    func passwordEntered() {
-        currentPasswordAttempt = ""
-        if (colorsPicked[0] == blackPaintImage){
-            if(colorsPicked[1] == redPaintImage){
-                if(colorsPicked[2] == greenPaintImage){
-                    self.performSegue(withIdentifier: "success", sender: self)
-                    print("Password Correct!")
-                }
+    func setpass_colors (pass: String){
+        let colors = Array(pass)
+        
+        for color in colors {
+            switch color{
+            case "0":
+                self.pass_colors.append(blackPaintImage)
+            case "1":
+                self.pass_colors.append(greenPaintImage)
+            case "2":
+                self.pass_colors.append(purplePaintImage)
+            case "3":
+                self.pass_colors.append(whitePaintImage)
+            case "4":
+                self.pass_colors.append(yellowPaintImage)
+            case "5":
+                self.pass_colors.append(redPaintImage)
+            case "6":
+                self.pass_colors.append(orangePaintImage)
+            default:
+                self.pass_colors.append(bluePaintImage)
             }
         }
-        else {
+        
+        
+    }
+
+    func passwordEntered() {
+        currentPasswordAttempt = ""
+        
+        switch colorsPicked {
+        case [pass_colors[0], pass_colors[1], pass_colors[2]]:
+            done = true
+            self.performSegue(withIdentifier: "success", sender: self)
+            print("Password Correct!")
+        default:
             print("password failed ")
             print("password reset")
+            attempt+=1
+            attempt_label.text = "Failed Attempt " + String(attempt)
+            
+            self.view.layer.borderColor = UIColor.red.cgColor
+            self.view.layer.borderWidth = 3
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+                self.view.layer.borderWidth = 0
+            })
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            for paints in colorsPicked{
+                paints.isHighlighted = false
+            }
+            colorsPicked.removeAll()
         }
-        for paints in colorsPicked{
-            paints.isHighlighted = false
-        }
-        colorsPicked.removeAll()
+        
     }
     
     func startColorTimer(colorNum: Int, paint: UIImageView) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            if (colorNum == self.currentColor) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            if (colorNum == self.currentColor && !self.done) {
                 print("Color chosen: \(colorNum)")
                 self.currentPasswordAttempt.append(String(colorNum))
                 
@@ -77,7 +131,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     })
                 })
                 
-                if (self.currentPasswordAttempt.count == self.password.count) {
+                if (self.currentPasswordAttempt.count == 3) {
                     self.passwordEntered()
                 }
             }
@@ -108,6 +162,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let angle = newHeading.trueHeading * .pi / 180
             //            self.dialImage.transform = CGAffineTransform(rotationAngle: CGFloat(-angle))
             self.paintBrushImage.transform = CGAffineTransform(rotationAngle: CGFloat(-angle))
+            
+            
+            
             switch Int(newHeading.trueHeading) {
             case 20..<65:
                 if (self.currentColor != 7) {
@@ -151,7 +208,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.startColorTimer(colorNum: 2, paint: self.purplePaintImage)
                 }
 //                print("Purple")
-            case 290..<330:
+            case 290..<335:
                 if (self.currentColor != 1) {
                     self.currentColor = 1
                     self.highlightPaint(currentPaint: self.greenPaintImage)
