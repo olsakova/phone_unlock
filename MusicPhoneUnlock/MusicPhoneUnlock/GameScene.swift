@@ -120,7 +120,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionArray = [SKAction]()
         
         //actionArray.append(SKAction.move(to: CGPoint(x: position, y: -note.size.height), duration: animationDuration))
-        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -700), duration: animationDuration))
+        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -370), duration: animationDuration))
         actionArray.append(SKAction.removeFromParent())
         
         note.run(SKAction.sequence(actionArray))
